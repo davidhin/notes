@@ -9,6 +9,8 @@
 | https://slurm.schedmd.com/documentation.html                 | Phoenix uses the slurm scheduler for tasks. Additional information can be found here if it is not present in Adelaide uni's wiki |
 | https://docs.ycrc.yale.edu/clusters-at-yale/guides/jupyter/  | How to run Jupyter Notebook on a Phoenix job                 |
 | https://wiki.adelaide.edu.au/hpc/Job_scripts                 | How to prepare a job script                                  |
+| https://wiki.adelaide.edu.au/hpc/Phoenix_data_management     | Information about file system structure                                  |
+
 
 ## Basic Phoenix commands
 
@@ -132,3 +134,8 @@ source deactivate
 ```
 
 When the job starts running, you look in the generated log file and follow the instructions. This will get the Jupyter Notebook on the Phoenix node to run in your browser.
+
+## File storage
+> https://wiki.adelaide.edu.au/hpc/Phoenix_data_management
+
+Most work will be done in the FAST partition, which gives 4TB of storage space to every user. Additional information can be found above. 
