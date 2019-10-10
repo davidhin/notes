@@ -10,7 +10,7 @@
 | https://docs.ycrc.yale.edu/clusters-at-yale/guides/jupyter/  | How to run Jupyter Notebook on a Phoenix job                 |
 | https://wiki.adelaide.edu.au/hpc/Job_scripts                 | How to prepare a job script                                  |
 | https://wiki.adelaide.edu.au/hpc/Phoenix_data_management     | Information about file system structure                                  |
-
+| https://wiki.adelaide.edu.au/hpc/Partitions_and_QoSs         | Information about maximum resource allocations
 
 ## Basic Phoenix commands
 
@@ -90,6 +90,8 @@ You would then submit the job using
 ```
 sbatch jobscript.sh
 ```
+
+There is a maximum on the amount of CPU cores, RAM, etc you can request depending on the partition chosen. `Batch` automatically selects an appropriate partition. More information at https://wiki.adelaide.edu.au/hpc/Partitions_and_QoSs
 
 ## Starting a Jupyter Notebook on a job
 
