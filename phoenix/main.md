@@ -141,3 +141,6 @@ When the job starts running, you look in the generated log file and follow the i
 > https://wiki.adelaide.edu.au/hpc/Phoenix_data_management
 
 Most work will be done in the FAST partition, which gives 4TB of storage space to every user. Additional information can be found above. 
+
+## Acknowledging_Phoenix_HPC_in_Publications
+Refer to https://wiki.adelaide.edu.au/hpc/Phoenix/Acknowledging_Phoenix_HPC_in_Publications
