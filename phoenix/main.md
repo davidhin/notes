@@ -21,15 +21,21 @@
 | `sbatch FILENAME`     | Submit a job to the queue. FILENAME is a job script.         |
 | `squeue -u STUDENTID` | Show what jobs you have currently submitted/are running      |
 | `scancel JOBID`       | Cancel a submitted job                                       |
+| `rcdu`                | Check disk usage                                             |
 
 ## Getting Started
 
-> https://wiki.adelaide.edu.au/hpc/Anaconda
+**Before starting, an account must be registered with the [University of Adelaide](https://www.adelaide.edu.au/technology/research/high-performance-computing/phoenix-hpc/register-for-an-account)**
 
 First, log in to phoenix. In my case,
 
 ```
 ssh a1720858@phoenix.rc.adelaide.edu.au
+```
+
+Change the shell to use bash (if it is not already using bash). This only needs to be done once.
+```
+rcshell -s /bin/bash
 ```
 
 Go to `$FASTDIR` partition.
@@ -137,6 +143,9 @@ source deactivate
 
 When the job starts running, you look in the generated log file and follow the instructions. This will get the Jupyter Notebook on the Phoenix node to run in your browser.
 
+## Using Job Arrays
+Job arrays are a useful feature to allow you to submit many (ideally) small tasks, allowing for true multiprocessing. Often this is done by splitting a file into many smaller files. Implementation is best explained with an example, found on phoenix at `/apps/examples/array_job/`. A more minimal example is also present at https://github.cs.adelaide.edu.au/a1720858/SecurityAnalytics/tree/master/examples/job_array
+
 ## File storage
 > https://wiki.adelaide.edu.au/hpc/Phoenix_data_management
 
@@ -144,3 +153,56 @@ Most work will be done in the FAST partition, which gives 4TB of storage space t
 
 ## Acknowledging_Phoenix_HPC_in_Publications
 Refer to https://wiki.adelaide.edu.au/hpc/Phoenix/Acknowledging_Phoenix_HPC_in_Publications
+
+## Deep Learning with GPU
+
+### Example Job Script
+
+To use GPU(s) in a job script, add --gres=gpu:N to any regular job script. For example, to use one GPU, a job script may look like this: (If using PyTorch, must load appropriate CUDA/CUDNN modules)
+
+```bash
+#SBATCH --partition batch
+#SBATCH --nodes 1
+#SBATCH -c 4
+#SBATCH --time 00:10:00
+#SBATCH --mem=4GB
+#SBATCH --gres=gpu:1
+
+module load CUDA/9.0.176
+module load CUDNN/5.1
+source activate main
+python3 somefile.py
+source deactivate
+```
+
+### PyTorch Installation
+
+An important note is that Phoenix's Nvidia driver version is **396.44** as of May 12 2020. The following installation has been tested and works as of this date. [source](https://pytorch.org/get-started/previous-versions/)
+
+```
+conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=9.0 -c pytorch
+```
+
+### Troubleshooting (PyTorch)
+
+If manual troubleshooting is required, the following commands can be used in the terminal of a job on a GPU-enabled node:
+
+- `nvidia-smi`  will show the Nvidia driver information.
+- `nvcc --version` will show the currently loaded version of CUDA
+
+In any Python environment of a job on a GPU-enabled node:
+
+```python
+import torch
+
+## Check GPU
+print("GPU Available: {}".format(torch.cuda.is_available()))
+n_gpu = torch.cuda.device_count()
+print("Number of GPU Available: {}".format(n_gpu))
+print("GPU: {}".format(torch.cuda.get_device_name(0)))
+
+## GPU Debugging
+!nvcc --version
+torch.backends.cudnn.enabled
+print(torch.version.cuda)
+```
