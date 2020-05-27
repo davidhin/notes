@@ -50,6 +50,8 @@ Load Anaconda
 module load Anaconda3/5.0.1
 ```
 
+Make sure the pkgs_dirs and envs_dirs are configured correctly, described [here](https://wiki.adelaide.edu.au/hpc/Anaconda#Configuring_your_conda_pkgs_dirs_and_envs_dirs)
+
 Create a Jupyter environment (only need to do this once)
 
 ```
