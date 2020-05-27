@@ -11,6 +11,10 @@
 | https://wiki.adelaide.edu.au/hpc/Job_scripts                 | How to prepare a job script                                  |
 | https://wiki.adelaide.edu.au/hpc/Phoenix_data_management     | Information about file system structure                                  |
 | https://wiki.adelaide.edu.au/hpc/Partitions_and_QoSs         | Information about maximum resource allocations
+| https://ipython.readthedocs.io/en/stable/install/kernel_install.html         | Ipykernel (use conda environments in jupyter notebook)
+
+
+
 
 ## Basic Phoenix commands
 
