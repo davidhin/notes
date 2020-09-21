@@ -25,7 +25,7 @@ jupyter notebook
 
 5. Find the node name using `squeue -u ABC` where ABC is your username / id. 
 6. Once your job has been allocated, under the `NODELIST` column, you will find your node ID. For example, `r2n45`. 
-7. SSH into the node. For example, `r2n45`. Now you are within your job node instead of the head node, so you can use your allocated resources freely. 
+7. SSH into the node. For example, `ssh r2n45`. Now you are within your job node instead of the head node, so you can use your allocated resources freely. 
 8. In your selected directory, create a script file (e.g. `start.sh`) which starts your Jupyter session. For example:
 
 ```
