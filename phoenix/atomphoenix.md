@@ -81,7 +81,7 @@ If you want to use Atom/VS code instead of the Jupyter editor, it is also possib
 
 1. Download and install [Atom](https://atom.io/)
 2. Install the [hydrogen]("https://atom.io/packages/hydrogen") package
-3. Go to `edit > preferences` and then under "Packages", click the settings button for Hydrogen. There will be a heading called Kernel Gateways. Here, you can specify the notebook (or multiple notebooks if you have submitted multiple jobs). Below is an example of two jobs. The relevant part is the baseUrl, where the port number has to be the same one as the one you have port forwarded above. The token is found in the URL returned by Jupyter. **You will have to manually copy this information into Atom every time you start a new remote Jupyter notebook, because the token changes.**
+3. Go to `edit > preferences` and then under "Packages", click the settings button for Hydrogen. There will be a heading called Kernel Gateways. Here, you can specify the notebook (or multiple notebooks if you have submitted multiple jobs). Below is an example of two jobs. The relevant part is the baseUrl and token, where the port number for baseUurl has to be the same one as the one you have port forwarded above. The token is found in the URL returned by Jupyter. **You will have to manually copy this information into Atom every time you start a new remote Jupyter notebook, because the token changes.**
 
 ```
 [{
