@@ -59,6 +59,8 @@ Make sure the pkgs_dirs and envs_dirs are configured correctly, described [here]
 Create a Jupyter environment (only need to do this once)
 
 ```
+conda config --prepend pkgs_dirs /hpcfs/users/aXXXXXXX/myconda/pkgs
+conda config --prepend envs_dirs /hpcfs/users/aXXXXXXX/myconda/envs
 conda create -yn main anaconda python=3
 ```
 
