@@ -51,6 +51,7 @@ cd $FASTDIR
 Load Anaconda
 
 ```
+module load arch/haswell
 module load Anaconda3/5.0.1
 ```
 
@@ -93,6 +94,7 @@ In `jobscript.sh`:
 #SBATCH --mem=4GB
 
 # Execute the program
+module load arch/haswell
 module load Anaconda3/5.0.1
 source activate main
 python3 somefile.py
@@ -142,6 +144,7 @@ localhost:${port}  (prefix w/ https:// if using password)
 "
 
 # Start notebook
+module load arch/haswell
 module load Anaconda3/5.0.1
 source activate main
 export XDG_RUNTIME_DIR=""
@@ -176,6 +179,7 @@ To use GPU(s) in a job script, add --gres=gpu:N to any regular job script. For e
 #SBATCH --mem=4GB
 #SBATCH --gres=gpu:1
 
+module load arch/haswell
 module load CUDA/9.0.176
 module load CUDNN/5.1
 source activate main
