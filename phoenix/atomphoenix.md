@@ -20,7 +20,7 @@ This is a tutorial that will show you how to set up your Atom to work with Phoen
 
 # This is just to keep the job from automatically closing
 module load Anaconda3/5.0.1
-jupyter notebook
+sleep 3d
 ```
 
 5. Find the node name using `squeue -u ABC` where ABC is your username / id. 
