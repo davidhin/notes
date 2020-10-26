@@ -29,6 +29,7 @@ conda deactivate
 # This is just to keep the job from automatically closing
 module load arch/haswell
 module load Anaconda3/5.1.0
+module load CUDA/10.2.89
 sleep 1d
 ```
 
