@@ -1,6 +1,7 @@
 # Notes about GPU in HPC1
 
 ### Set up Conda Environment (basics):
+Uses keras-gpu=2.4.3, which uses TensorFlow 2.2.0
 
 ```bash
 module load Anaconda3/2020.07
@@ -8,7 +9,7 @@ module load Anaconda3/2020.07
 conda create -n "main" python=3.8 ipython
 
 conda install -c conda-forge numpy pandas pygithub progressbar2 gensim fastparquet -y
-conda install -c anaconda scikit-learn keras-gpu -y
+conda install -c anaconda scikit-learn keras-gpu=2.4.3 -y
 
 conda activate main
 ipython kernel install --name "main-venv" --user
