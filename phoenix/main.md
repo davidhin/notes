@@ -34,7 +34,7 @@
 First, log in to phoenix. In my case,
 
 ```
-ssh a1720858@phoenix.rc.adelaide.edu.au
+ssh a1720858@phoenix-login1.adelaide.edu.au
 ```
 
 Change the shell to use bash (if it is not already using bash). This only needs to be done once.
