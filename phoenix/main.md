@@ -42,10 +42,10 @@ Change the shell to use bash (if it is not already using bash). This only needs 
 rcshell -s /bin/bash
 ```
 
-Go to `$FASTDIR` partition.
+Go to your HPFCS partition.
 
 ```
-cd $FASTDIR
+cd /hpcfs/users/aXXXXXXX
 ```
 
 Load Anaconda
@@ -160,7 +160,7 @@ Job arrays are a useful feature to allow you to submit many (ideally) small task
 ## File storage
 > https://wiki.adelaide.edu.au/hpc/Phoenix_data_management
 
-Most work will be done in the FAST partition, which gives 4TB of storage space to every user. Additional information can be found above. 
+Most work will be done in the HPCFS partition, which gives 1TB of storage space to every user. Additional information can be found above. (Updated 14/1/21 for HPC1)
 
 ## Acknowledging_Phoenix_HPC_in_Publications
 Refer to https://wiki.adelaide.edu.au/hpc/Phoenix/Acknowledging_Phoenix_HPC_in_Publications
