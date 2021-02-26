@@ -19,9 +19,10 @@
 
 #### Example Issue Description Template
 
-Below is an example of an issue following a defined structure. Note that it is more oriented towards agile software development (user stories, acceptance criteria), so it may not apply to all projects. 
+Below is an example of an issue following a defined structure. Note that it is more oriented towards agile software development (user stories, acceptance criteria), so it may not apply to all projects. The issue is written in markdown, so checkboxes are written as "- [ ]"
 
 > **User Story** 
+> 
 > As a user, I want to be able to see if my requests are loading so that I know to wait to not resend requests that are being processed.
 >
 > **Acceptance Criteria** 
